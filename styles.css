@@ -258,7 +258,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* Peça em destaque: foto e informações lado a lado; o card inteiro é o link para o WhatsApp. */
 .piece__link {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  /* foto e texto com larguras fixas, centralizados juntos na página */
+  grid-template-columns: minmax(0, 440px) minmax(0, 460px);
+  justify-content: center;
   gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
   text-decoration: none; color: inherit; border-radius: 4px;
