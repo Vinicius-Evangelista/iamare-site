@@ -19,6 +19,7 @@
   --oliva-escuro: #595b3f;
   --sobre-oliva: #faf6f0; /* texto claro com contraste AA sobre o verde oliva */
   --branco: #fffcf8;
+  --vermelho-lumen: #9d362f; /* vermelho dos enfeites da coleção Lumen, suavizado para a paleta */
 
   --serif: "Gentium Plus", Georgia, serif;
   --sans: "Montserrat", system-ui, sans-serif;
@@ -282,6 +283,30 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .piece__link:active .piece__media { transform: scale(0.99); transition: transform var(--t-fast) var(--ease-out); }
 
+/* ---------- Coleção Lumen (Natal) ---------- */
+
+.collection {
+  position: relative; isolation: isolate;
+  text-align: center;
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+/* "lumen" é luz: um brilho suave atrás do nome */
+.collection::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: radial-gradient(closest-side, color-mix(in oklab, var(--linho) 90%, transparent), transparent);
+}
+.collection .eyebrow { color: var(--vermelho-lumen); margin-bottom: 0.4rem; }
+.collection__title { font: 400 clamp(3.4rem, 2rem + 7vw, 7.5rem)/1 var(--serif); color: var(--vermelho-lumen); letter-spacing: 0.02em; }
+.collection__title > span > span { display: inline-block; }
+
+.star {
+  position: absolute; left: var(--x); top: var(--y);
+  width: var(--s); height: var(--s);
+  fill: var(--vermelho-lumen); overflow: visible;
+}
+.star use { transform-box: fill-box; transform-origin: center; }
+
 .pieces__note {
   margin-top: clamp(3rem, 6vw, 5rem);
   max-width: 44ch;
@@ -465,6 +490,28 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @keyframes ripple { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(calc(var(--dir) * 7px)); } }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
+/* Coleção Lumen: as letras sobem, as estrelas surgem girando e depois cintilam
+   em ritmos diferentes; a luz atrás do nome respira devagar. A entrada fica no
+   <svg> e a cintilação no <use>, para as duas animações não disputarem o transform. */
+.js .collection__title > span > span { opacity: 0; transform: translateY(45%); }
+.js .collection.is-in .collection__title > span > span {
+  opacity: 1; transform: none;
+  transition: opacity 900ms var(--ease-out), transform 1100ms var(--ease-out);
+  transition-delay: calc(var(--l) * 90ms + 250ms);
+}
+.js .collection .star { opacity: 0; transform: scale(0) rotate(-70deg); }
+.js .collection.is-in .star { animation: star-in 900ms var(--ease-out) calc(var(--d) * 110ms + 400ms) both; }
+.js .collection.is-in .star use {
+  animation: twinkle calc(2.4s + var(--d) * 0.35s) var(--ease-in-out) calc(var(--d) * -0.6s) infinite;
+}
+.js .collection.is-in::before { animation: glow 5s var(--ease-in-out) 1.5s infinite; }
+@keyframes star-in { to { opacity: 1; transform: none; } }
+@keyframes twinkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50% { transform: scale(0.5) rotate(25deg); opacity: 0.35; }
+}
+@keyframes glow { 50% { opacity: 0.5; } }
+
 /* Ícones desenhados em traço */
 .js .value__icon path { stroke-dasharray: 1; stroke-dashoffset: 1; }
 .js .value.is-in .value__icon path { stroke-dashoffset: 0; transition: stroke-dashoffset 1800ms var(--ease-in-out) calc(var(--d, 0) * 200ms + 300ms); }
@@ -510,6 +557,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .section-head--split { grid-template-columns: 1fr; }
 
   .piece__link { grid-template-columns: 1fr; gap: 1.6rem; }
+
+  /* no celular o nome ocupa mais da largura: algumas estrelas mudam de lugar (--mx/--my) */
+  .collection { padding-block: 4rem; }
+  .star { left: var(--mx, var(--x)); top: var(--my, var(--y)); }
 
   .essence__inner { grid-template-columns: 1fr; }
   .essence__symbol { max-width: 200px; justify-self: center; }
