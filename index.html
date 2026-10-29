@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iamaré · cerâmica artesanal</title>
+  <meta name="description" content="Peças de cerâmica feitas à mão. Pedidos pelo WhatsApp, entregas apenas em SP.">
+  <meta name="theme-color" content="#e5d6c8">
+  <link rel="icon" href="assets/vase.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+
+<!-- Número do WhatsApp com DDI + DDD, só dígitos. Todos os botões da página usam este valor. -->
+<body data-whatsapp="5511900000000">
+  <a class="skip" href="#pecas">Pular para as peças</a>
+
+  <p class="topbar">Entregamos apenas em SP<span class="topbar__extra"> <span aria-hidden="true">·</span> Pedidos pelo WhatsApp</span></p>
+
+  <header class="header">
+    <div class="header__inner container">
+      <a class="brand" href="#topo" aria-label="iamaré, início">
+        <img class="brand__mark" src="assets/vase.svg" alt="" width="20" height="30">
+        <span class="brand__name">iamaré</span>
+      </a>
+      <nav class="nav" aria-label="Seções">
+        <a href="#pecas">Peças</a>
+        <a href="#essencia">Essência</a>
+        <a href="#como-comprar">Como comprar</a>
+      </nav>
+      <a class="header__wa" data-wa href="https://wa.me/">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.3 18.4z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="topo">
+      <div class="hero__art" data-svg="assets/cover-pattern.svg" data-fit="xMaxYMid slice" aria-hidden="true"></div>
+
+      <div class="hero__copy">
+        <p class="eyebrow" data-intro style="--d:0">Cerâmica feita à mão</p>
+        <h1 class="hero__title js-split">Moldar. <em>Cuidar.</em> Servir.</h1>
+        <p class="hero__lead" data-intro style="--d:5">Mais do que cerâmica, um convite para moldar momentos, cuidar das relações e servir com beleza e simplicidade.</p>
+        <div class="hero__actions" data-intro style="--d:6">
+          <a class="btn" href="#pecas">Ver as peças</a>
+          <a class="link-wave" data-wa href="https://wa.me/">
+            Conversar no WhatsApp
+            <svg class="wave-line" viewBox="0 0 120 8" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1 4C11 0 21 8 31 4S51 0 61 4 81 8 91 4 111 0 119 4"/></svg>
+          </a>
+        </div>
+        <p class="hero__note" data-intro style="--d:7">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+          Entregamos apenas em SP
+        </p>
+      </div>
+    </section>
+
+    <section class="section pieces" id="pecas">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-reveal>Peças</p>
+          <h2 class="h2" data-reveal>Escolha uma peça. <br>O resto a gente conversa.</h2>
+          <p class="section-head__text" data-reveal>Ao tocar em uma peça, o WhatsApp abre com a mensagem pronta. Por lá confirmamos disponibilidade, pagamento e entrega.</p>
+        </header>
+
+        <article class="piece" data-reveal>
+          <a class="piece__link" data-wa data-piece="Enfeites de Natal" data-price="R$ 94,99" href="https://wa.me/">
+            <div class="piece__media">
+              <img src="assets/img/enfeites-natal.jpg" alt="Oito enfeites de Natal pintados: bolas vermelhas com ramos verdes, estrelas brancas com detalhes dourados e bonecos de gengibre" width="960" height="1280" loading="lazy">
+            </div>
+            <div class="piece__info">
+              <h3 class="piece__name">Enfeites de Natal</h3>
+              <p class="piece__price">R$ 94,99</p>
+              <p class="piece__desc">Kit com 8 enfeites natalinos feitos à mão.</p>
+              <span class="btn btn--wa">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.3 18.4z"/></svg>
+                Pedir pelo WhatsApp
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <p class="pieces__note" data-reveal>Cada peça é única.</p>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path pathLength="1" d="M0 34C140 14 260 50 400 32S640 10 760 30 1000 54 1140 30 1340 12 1440 26"/>
+        <path pathLength="1" d="M60 46C200 30 300 58 450 44S700 24 820 42 1080 60 1220 42 1400 32 1440 40"/>
+      </svg>
+    </div>
+
+    <section class="essence" id="essencia">
+      <div class="container essence__inner">
+        <div class="essence__symbol" data-svg="assets/vase.svg" aria-hidden="true"></div>
+
+        <div class="essence__copy">
+          <p class="eyebrow" data-reveal>A essência</p>
+          <p class="essence__quote" data-reveal>A iamaré nasceu do propósito de transformar o comum em significado.</p>
+          <p class="essence__text" data-reveal>Peças feitas à mão que guardam tempo, intenção e cuidado em cada detalhe.</p>
+
+          <ul class="values" role="list">
+            <li class="value" data-reveal style="--d:0">
+              <svg class="value__icon" viewBox="0 0 56 56" aria-hidden="true">
+                <path pathLength="1" d="M21 7h14M22.5 7c0 4-2 6-6.5 10.5C10.5 23 9.5 30 11.5 37c2.2 7.5 8.5 11 16.5 11s14.3-3.5 16.5-11c2-7 1-14-4.5-19.5C35.5 13 33.5 11 33.5 7"/>
+              </svg>
+              <span>moldar</span>
+            </li>
+            <li class="value" data-reveal style="--d:1">
+              <span class="value__pattern" data-svg="assets/pattern.svg"></span>
+              <span>cuidar</span>
+            </li>
+            <li class="value" data-reveal style="--d:2">
+              <svg class="value__icon" viewBox="0 0 56 56" aria-hidden="true">
+                <path pathLength="1" d="M28 30c-5-4.5-10-8-10-13a5.5 5.5 0 0 1 10-3 5.5 5.5 0 0 1 10 3c0 5-5 8.5-10 13z"/>
+                <path pathLength="1" d="M5 40c5-1 9 0 13 2.5h9c2 0 2 3 0 3h-8M26 45.5l5 .5 15-7c2.5-1 4 1.5 2 3L33 50c-2 1-4 1.2-6 .6L5 47"/>
+              </svg>
+              <span>servir</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" aria-labelledby="processo-titulo">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Processo</p>
+            <h2 class="h2" id="processo-titulo" data-reveal>Sem pressa.</h2>
+          </div>
+          <p class="section-head__text" data-reveal>Não aceleramos processos. O tempo de moldar, secar e queimar faz parte de cada peça.</p>
+        </header>
+
+        <ol class="process__list" role="list">
+          <li class="step-photo" data-reveal>
+            <img src="assets/img/argila.jpg" alt="Bloco de argila crua com marcas de mãos" width="303" height="378" loading="lazy">
+            <h3>Barro</h3>
+            <p>A matéria que nos conecta à terra e à origem.</p>
+          </li>
+          <li class="step-photo" data-reveal>
+            <img src="assets/img/maos-torno.jpg" alt="Mãos moldando uma peça de argila no torno" width="310" height="369" loading="lazy">
+            <h3>Manualidade</h3>
+            <p>O feito à mão que carrega intenção, história e alma.</p>
+          </li>
+          <li class="step-photo" data-reveal>
+            <img src="assets/img/ferramentas.jpg" alt="Ferramentas de modelagem com cabo de madeira e uma esponja" width="308" height="378" loading="lazy">
+            <h3>Tempo</h3>
+            <p>Respeitamos o tempo do fazer, do secar, do viver.</p>
+          </li>
+          <li class="step-photo" data-reveal>
+            <img src="assets/img/oliveira.jpg" alt="Ramo de oliveira sobre tecido de linho claro" width="308" height="369" loading="lazy">
+            <h3>Natureza</h3>
+            <p>Nossa maior fonte de cor, textura e inspiração.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section buy" id="como-comprar" aria-labelledby="comprar-titulo">
+      <div class="container buy__inner">
+        <div class="buy__steps">
+          <p class="eyebrow" data-reveal>Como comprar</p>
+          <h2 class="h2" id="comprar-titulo" data-reveal>Três passos, <br>uma conversa.</h2>
+
+          <ol class="steps" role="list">
+            <li class="step" data-reveal>
+              <span class="step__num">01</span>
+              <div>
+                <h3>Escolha</h3>
+                <p>Toque na peça que chamou sua atenção. O WhatsApp abre com a mensagem pronta.</p>
+              </div>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">02</span>
+              <div>
+                <h3>Converse</h3>
+                <p>Confirmamos a disponibilidade e combinamos o pagamento e a entrega.</p>
+              </div>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step__num">03</span>
+              <div>
+                <h3>Receba</h3>
+                <p>Sua peça chega embalada com cuidado. <strong>Por enquanto, entregamos apenas em SP.</strong></p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="buy__figure" data-reveal>
+          <img src="assets/img/embalagem.jpg" alt="Caixa kraft amarrada com barbante, com a etiqueta da iamaré: Feito à mão com carinho" width="1280" height="853" loading="lazy">
+          <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="stamp-circle" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
+            <g class="stamp__ring">
+              <text><textPath href="#stamp-circle" startOffset="0" textLength="462" lengthAdjust="spacing">entregas apenas em SP · entregas apenas em SP ·</textPath></text>
+            </g>
+            <text class="stamp__center" x="100" y="112" text-anchor="middle">SP</text>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="fechamento-titulo">
+      <div class="container closing__inner">
+        <figure class="closing__photo" data-reveal>
+          <img src="assets/img/copo.jpg" alt="Copo de cerâmica salpicada com bebida, sobre pedra clara sob luz natural" width="960" height="1280" loading="lazy">
+        </figure>
+        <div class="closing__copy">
+          <p class="closing__quote" id="fechamento-titulo" data-reveal>O que permanece nunca é apenas o barro, mas o amor que foi moldado nele.</p>
+          <a class="btn btn--wa" data-wa href="https://wa.me/" data-reveal>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.3 18.4z"/></svg>
+            Conversar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="brand brand--light" href="#topo" aria-label="iamaré, voltar ao início">
+        <span class="brand__name">iamaré</span>
+      </a>
+      <p class="footer__tagline">Moldar. Cuidar. Servir.</p>
+      <p class="footer__meta">Entregas apenas em SP <span aria-hidden="true">·</span> Pedidos pelo WhatsApp <span aria-hidden="true">·</span> © 2026 iamaré</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa href="https://wa.me/" aria-label="Pedir pelo WhatsApp">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.3 18.4z"/></svg>
+    <span>Pedir pelo WhatsApp</span>
+  </a>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

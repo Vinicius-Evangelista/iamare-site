@@ -1,0 +1,8 @@
+# Ferramentas locais de desenvolvimento (servidor sem cache, config do preview)
+.claude/
+
+# Fotos que saíram do site e não devem ser publicadas
+assets/img/vaso-duna.jpg
+assets/img/tigela-mare.jpg
+assets/img/caneca-abraco.jpg
+assets/img/vaso-colo.jpg
